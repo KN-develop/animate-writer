@@ -36,14 +36,14 @@ export const animateWriter: AnimateWriter = (root, opts?) => {
                 root.textContent = root.textContent + char;
                 if (point < inputString.length - 1) {
                     print(point + 1);
-                } else {
+                } else if (stringPointer < options.input.length - 1 || options.loop) {
                     backspace();
                 }
             }, delay);
         }
 
         function backspace () {
-            const delay = speed / 2;
+            const delay = speed / 10;
             setTimeout(function () {
                 const newString = root.textContent?.substring(0, root.textContent.length - 1) || '';
                 root.textContent = newString;

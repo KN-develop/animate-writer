@@ -12,10 +12,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
     <h1>Animate writer</h1>
-    <p class="read-the-docs">
-        &nbsp; <span class="js-animate-write" data-aw-input='["Lorem ipsum","Test print 2"]' data-aw-speed="300" style="--aw-cursor-color: green"></span>
-    </p>
+    <h2>
+        &#8203;<span class="js-animate-write" data-aw-speed="150"></span>
+    </h2>
   </div>
 `
 
-initAnimateWriter('.js-animate-write');
+initAnimateWriter('.js-animate-write', {
+    input: [
+        'Lorem Ipsum is simply dummy text',
+        'It has survived not only five centuries',
+        'It was popularised in the 1960s'
+    ],
+});
