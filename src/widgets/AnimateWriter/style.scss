@@ -1,0 +1,25 @@
+@keyframes cursor-blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+:root {
+    --aw-cursor-color: black;
+}
+
+.aw-cursor::after {
+     content: '';
+     position: absolute;
+     height: 100%;
+     width: 1px;
+     margin-left: 2px;
+     background: var(--aw-cursor-color);
+     animation: cursor-blink 1500ms infinite;
+}
