@@ -10,3 +10,10 @@ export interface Options extends AnimateWriterOptions {
     isAutoSpeedChange: boolean;
     isCursorShow: boolean;
 }
+
+export interface DatasetOptionsInterface {
+    awSpeed?: string;
+    awInput?: string;
+    awIsAutoSpeedChange?: string;
+    awIsCursorShow?: string;
+}

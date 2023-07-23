@@ -12,10 +12,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
     <h1>Animate writer</h1>
-    <p class="read-the-docs js-animate-write" style="--aw-cursor-color: green">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
+    <p class="read-the-docs js-animate-write" data-aw-input="Тестовый текст из дата атрибута" data-aw-speed="300" data-aw-is-cursor-show="false" style="--aw-cursor-color: green"></p>
   </div>
 `
 
-initAnimateWriter('.js-animate-write', {input: 'Вот этот текст тут должен быть введен'});
+initAnimateWriter('.js-animate-write');

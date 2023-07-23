@@ -14,7 +14,7 @@ npm i @kndev/animate-writer -D
 
 1. Create element to select.
 
-```<p class="some-class"></span>```
+```<p class="some-class"></p>```
 
 2. Usage in your js file
 
@@ -54,3 +54,13 @@ interface AnimateWriterOptions {
     isCursorShow?: boolean;
 }
 ```
+
+## Options from data attributes
+```<p
+    class="some-class"
+    data-aw-speed="200"
+    data-aw-input="Some text"
+    data-aw-is-auto-speed-change="true"
+    data-aw-is-cursor-show="true"
+   ></p>
+ ```
