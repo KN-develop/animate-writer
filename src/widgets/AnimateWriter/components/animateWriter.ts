@@ -1,10 +1,12 @@
-import {AnimateWriterOptions} from "../types/AnimateWriterOptions.ts";
+import {AnimateWriterOptions, Options} from "../types/AnimateWriterOptions.ts";
 
 const DEFAULT_SPEED = 200;
 const CURSOR_CLASSNAME = 'aw-cursor';
 
-export const animateWriter = (root: HTMLElement, opts?: Record<string, any>) => {
-    const options: AnimateWriterOptions = {
+type AnimateWriter = (root: HTMLElement, opts?: AnimateWriterOptions) => void;
+
+export const animateWriter: AnimateWriter = (root, opts?) => {
+    const options: Options = {
         speed: opts && typeof opts.speed === "number" && opts.speed > 0 ? opts.speed : DEFAULT_SPEED,
         input: opts && typeof opts.input === "string" && !!opts.input ? opts.input : root.textContent || 'Default string',
         isAutoSpeedChange: true,
