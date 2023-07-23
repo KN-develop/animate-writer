@@ -1,14 +1,16 @@
 export interface AnimateWriterOptions {
     speed?: number;
-    input?: string;
+    input?: string[] | string;
     isAutoSpeedChange?: boolean;
     isCursorShow?: boolean;
+    loop?: boolean;
 }
-export interface Options extends AnimateWriterOptions {
+export interface Options {
     speed: number;
-    input: string;
+    input: string[];
     isAutoSpeedChange: boolean;
     isCursorShow: boolean;
+    loop: boolean;
 }
 
 export interface DatasetOptionsInterface {
@@ -16,4 +18,5 @@ export interface DatasetOptionsInterface {
     awInput?: string;
     awIsAutoSpeedChange?: string;
     awIsCursorShow?: string;
+    awLoop?: string;
 }

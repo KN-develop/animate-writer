@@ -12,7 +12,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
     <h1>Animate writer</h1>
-    <p class="read-the-docs js-animate-write" data-aw-input="Тестовый текст из дата атрибута" data-aw-speed="300" data-aw-is-cursor-show="false" style="--aw-cursor-color: green"></p>
+    <p class="read-the-docs">
+        &nbsp; <span class="js-animate-write" data-aw-input='["Lorem ipsum","Test print 2"]' data-aw-speed="300" style="--aw-cursor-color: green"></span>
+    </p>
   </div>
 `
 

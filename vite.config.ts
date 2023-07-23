@@ -9,11 +9,11 @@ export default defineConfig({
         dts({
             insertTypesEntry: true,
         }),
-        obfuscatorPlugin({
-            exclude: [/node_modules/],
-            apply: "build",
-            debugger: true,
-        }),
+        // obfuscatorPlugin({
+        //     exclude: [/node_modules/],
+        //     apply: "build",
+        //     debugger: true,
+        // }),
     ],
     build: {
         lib: {

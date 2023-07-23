@@ -1,4 +1,3 @@
-// @ts-ignore
 import {animateWriter as anim} from "./components/animateWriter.ts";
 import './style.scss';
 

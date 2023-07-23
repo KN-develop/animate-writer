@@ -1,8 +1,6 @@
-<h1 align="center">AnimateWriter</h1>
+# AnimateWriter
 
-<p align="center">
-  Animated typing plugin for website
-</p>
+Animated typing plugin for website
 
 ## Install
 
@@ -38,10 +36,10 @@ interface AnimateWriterOptions {
      */
     speed: number;
     /**
-     * String to be write
+     * String or array of string to be write
      * @default HTMLElement.textContent | 'Default string'
      */
-    input: string;
+    input: string | string[];
     /**
      * Simulation of human input
      * @default true
@@ -52,15 +50,22 @@ interface AnimateWriterOptions {
      * @default true
      */
     isCursorShow?: boolean;
+    /**
+     * Loop animation
+     * @default true
+     */
+    loop?: boolean;
 }
 ```
 
 ## Options from data attributes
-```<p
+```html
+<p
     class="some-class"
     data-aw-speed="200"
     data-aw-input="Some text"
     data-aw-is-auto-speed-change="true"
     data-aw-is-cursor-show="true"
-   ></p>
+    data-aw-loop="true"
+></p>
  ```
